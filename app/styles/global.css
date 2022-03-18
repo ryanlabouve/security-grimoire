@@ -12,3 +12,8 @@ body {
   background: rgb(17 24 39);
   color: #efefef;
 }
+
+a:link {
+  text-decoration: underline;
+  color: cyan;
+}
