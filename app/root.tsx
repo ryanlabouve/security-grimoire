@@ -38,7 +38,7 @@ export function links() {
 }
 export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
-  const [sidebarWidth, setSidebarWidth] = useState<number>(400);
+  const [sidebarWidth, setSidebarWidth] = useState<number>(250);
 
   return (
     <html lang="en">

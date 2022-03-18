@@ -8,7 +8,7 @@ interface ConfigContext {
 }
 const ConfigContext = React.createContext<ConfigContext>({
   isSidebarOpen: true,
-  sidebarWidth: 400,
+  sidebarWidth: 200,
   setIsSidebarOpen: () => {
     throw "Implement #setSidebarOpen";
   },
