@@ -12,7 +12,9 @@ export default function Index() {
       </p>
       <p>
         Feel free to&nbsp;
-        <a href="https://github.com/ryalabouve/security-grimoire">contribute</a>
+        <a href="https://github.com/ryanlabouve/security-grimoire">
+          contribute
+        </a>
       </p>
     </Content>
   );
