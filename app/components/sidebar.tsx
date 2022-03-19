@@ -16,7 +16,7 @@ export default function Sidebar() {
         }}
       >
         <Link to="/" style={{ color: "white", textDecoration: "none" }}>
-          SECURITY GRIMOIRE
+          RL, SECURITY GRIMOIRE
         </Link>
       </div>
       {!isSidebarOpen && (
@@ -47,16 +47,13 @@ export default function Sidebar() {
           &lt;&lt;
         </div>
         <div>
-          <Link to="/books">Books</Link>
+          <Link to="/methodology">Methodology</Link>
         </div>
         <div>
           <Link to="/domains">Domains</Link>
         </div>
         <div>
           <Link to="/tools">Tools</Link>
-        </div>
-        <div>
-          <Link to="/methodology">Methodology</Link>
         </div>
         <div>
           <Link to="/books">Books</Link>
