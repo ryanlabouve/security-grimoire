@@ -1,3 +1,5 @@
+import { Link } from "remix";
+
 export default function Methodology() {
   return (
     <div>
@@ -5,7 +7,9 @@ export default function Methodology() {
       <div>&nbsp;</div>
       <div>Application Hunting</div>
       <div>CTFs</div>
-      <div>Day cycle</div>
+      <div>
+        <Link to="day-week-month-cycle">Day / Week / Month cycle</Link>
+      </div>
       <div>Personal Operation</div>
       <div>Travel Security</div>
       <div>CI/CD Hunting</div>

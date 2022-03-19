@@ -6,7 +6,7 @@ export default function Sidebar() {
   let { sidebarWidth, isSidebarOpen, setIsSidebarOpen } =
     useContext<ConfigContext>(ConfigContext);
   return (
-    <div className="fixed left-0 top-0 h-screen p-6 flex">
+    <div className="fixed left-0 top-0 h-screen p-6 flex z-10">
       <div
         className="bg-cyan-400 fixed bottom-0 left-0 -rotate-90 px-3 z-10"
         style={{
@@ -16,7 +16,7 @@ export default function Sidebar() {
         }}
       >
         <Link to="/" style={{ color: "white", textDecoration: "none" }}>
-          RL, SECURITY GRIMOIRE
+          SECURITY GRIMOIRE
         </Link>
       </div>
       {!isSidebarOpen && (
