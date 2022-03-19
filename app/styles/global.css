@@ -13,7 +13,8 @@ body {
   color: #efefef;
 }
 
-a:link {
+a:link,
+a:visited {
   text-decoration: underline;
   color: cyan;
 }

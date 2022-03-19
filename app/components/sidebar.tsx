@@ -1,3 +1,4 @@
+import { Link } from "remix";
 import { useContext } from "react";
 import { ConfigContext } from "~/contexts/config-context";
 import clsx from "clsx";
@@ -30,6 +31,7 @@ export default function Sidebar() {
         <div>Domains</div>
         <div>Tools</div>
         <div>Methodology</div>
+        <Link to="/books">Books</Link>
       </div>
     </div>
   );
