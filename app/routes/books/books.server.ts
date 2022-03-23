@@ -1,7 +1,5 @@
-import path from "path";
-import fs from "fs/promises";
-import parseFrontMatter from "front-matter";
 import invariant from "tiny-invariant";
+import { json } from "remix";
 
 export type Book = {
   slug: string;
@@ -17,33 +15,15 @@ function isValidAttributes(attributes: any): attributes is BookAttributes {
   return attributes?.meta?.slug;
 }
 
-export async function getBooks() {
-  const booksPath = path.join(
-    __dirname,
-    "..",
-    "app",
-    "routes",
-    "books",
-    "__mdx"
-  );
-  const dir = await fs.readdir(booksPath);
-  const filenames = dir.filter((f) => f.endsWith("mdx"));
+interface RuntimeRoute {
+  id: string;
+  index: string;
+  parentId: string;
+  path: string;
+}
 
-  return Promise.all(
-    filenames.map(async (filename) => {
-      const file = await fs.readFile(path.join(booksPath, filename));
-      const { attributes } = parseFrontMatter(file.toString());
-
-      invariant(
-        isValidAttributes(attributes),
-        `${filename} has bad meta data!`
-      );
-
-      return {
-        slug: filename.replace(/\.mdx$/, ""),
-        title: attributes.meta.title,
-        author: attributes.meta.author,
-      };
-    })
-  );
+export async function getBooks(): Promise<Book[]> {
+  let response: Response = await fetch(`https://bookshell.fly.dev/api/books`);
+  let books: Book[] = await response.json();
+  return books;
 }
