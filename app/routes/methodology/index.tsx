@@ -5,6 +5,9 @@ export default function Methodology() {
     <div>
       <div>How you do anything is how you do everything.</div>
       <div>&nbsp;</div>
+      <div>
+        <Link to="online-opsec">Online OpSec</Link>
+      </div>
       <div>Application Hunting</div>
       <div>CTFs</div>
       <div>

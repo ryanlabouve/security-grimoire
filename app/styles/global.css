@@ -28,6 +28,10 @@ a:visited {
   position: relative;
 }
 
+.shade {
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
 @keyframes canScrollDown {
   0%,
   80% {
